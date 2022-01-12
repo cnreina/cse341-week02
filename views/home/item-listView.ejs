@@ -46,13 +46,11 @@
                                         <%= item.description %>
                                     </p>
                                 </div>
-                                <div class="card__content">
-                                    <p class="item__description">Tags:</p>
-                                    <br>
-                                    <% for (let tag of item.tags) { %>
-                                        <a href="/items-by-tag/<%= tag %>" class="item__tags"><%= tag %></a>
-                                    <% } %>
-                                </div>
+                                <% if(item.tags.length > 0){ %> 
+                                    <div class="card__content">
+                                        <p class="item__description">Tags: <%= item.tags %> </p>
+                                    </div>
+                                <% } %>
                             </article>
                         <% } %>
                     </div>

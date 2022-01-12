@@ -34,6 +34,7 @@ const getItemsFromFile = callBack => {
     if (err) {
       callBack([]);
     } else {
+      this.id = Math.random().toString();
       callBack(JSON.parse(fileContent));
     }
   });
