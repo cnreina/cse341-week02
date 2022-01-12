@@ -7,8 +7,7 @@ const filePath = path.join(
 );
 
 module.exports = class ItemClass {
-  constructor(id, tags, imageUrl, price, name, description) {
-    this.id = id;
+  constructor(tags, imageUrl, price, name, description) {
     this.tags = tags;
     this.imageUrl = imageUrl;
     this.price = price;
